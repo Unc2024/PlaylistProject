@@ -6,7 +6,10 @@
 public class Song {
     //Fields-- what information do we want each Song to store?
 
-
+    private String title;
+    private String artist;
+    private int durationSeconds; // store duration in total seconds
+    private boolean liked;
 
 
     /**
@@ -14,7 +17,12 @@ public class Song {
      * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
      */
 
-
+    public Song(String title, String artist, int minutes, int seconds) {
+        this.title = title;
+        this.artist = artist;
+        this.durationSeconds = minutes * 60 + seconds;
+        this.liked = false;
+    }
 
 
 
@@ -26,5 +34,35 @@ public class Song {
       * What kind of mutator (setter) methods will you need?
       */
 
+     public String getTitle() {
+        return title;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public int getDurationSeconds() {
+        return durationSeconds;
+    }
+
+    public boolean isLiked() {
+        return liked;
+    }
+
+    // Mutators
+    public void like() {
+        liked = true;
+    }
+
+    public void unlike() {
+        liked = false;
+    }
+
+    // Helper: duration string m:ss
+
+    /**
+     * toString for printing in playlist
+     */
 
 }
