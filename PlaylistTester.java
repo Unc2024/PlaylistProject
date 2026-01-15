@@ -25,10 +25,24 @@ public class PlaylistTester {
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
 
-
         System.out.println("\nLiking the songs in position 2, 3, 4....\n");
         //Once your songs are 'liked', this should be reflected in the next printout
 
+        System.out.println("Printing the songs...\n");
+        //Print out all the songs in the playlist to verify it's working correctly
+        p.printAllSongs();
+
+        System.out.println("\nLiking the songs in position 1, 3, 4....\n");
+        //Once your songs are 'liked', this should be reflected in the next printout
+
+        System.out.println("Printing the songs...\n");
+
+        System.out.println("\nRemoving the song in position 2...\n");
+
+        System.out.println("Printing the songs...\n");
+
+        System.out.println("\nPrinting only the liked songs...\n");
+        //Your Playlist should be able to do this without looping while in main!
 
         System.out.println("Printing the songs...\n");
 
