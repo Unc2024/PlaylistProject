@@ -60,9 +60,20 @@ public class Song {
     }
 
     // Helper: duration string m:ss
-
+    public String getDurationString() {
+        int minutes = durationSeconds / 60;
+        int seconds = durationSeconds % 60;
+        return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+    }
 
     /**
      * toString for printing in playlist
      */
+    public String toString() {
+        String s = "“" + title + "” by " + artist + " (" + getDurationString() + ")";
+        if (liked) {
+            s += " -- liked";
+        }
+        return s;
+    }
 }
