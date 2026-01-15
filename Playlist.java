@@ -53,8 +53,31 @@ public class Playlist {
     }
 
     // Examining all songs (prints)
-    
+
+     public void printAllSongs() {
+        for (Song s : songs) {
+            System.out.println(s);
+        }
+    }
+
     // Examining a sublist of liked songs (prints)
+      public void printLikedSongs() {
+        for (Song s : songs) {
+            if (s.isLiked()) {
+                System.out.println(s);
+            }
+        }
+    }
 
     // Determining total duration (returns formatted string m:ss)
-}  
+       public String getTotalDurationString() {
+        int totalSeconds = 0;
+        for (Song s : songs) {
+            totalSeconds += s.getDurationSeconds();
+        }
+
+        int minutes = totalSeconds / 60;
+        int seconds = totalSeconds % 60;
+        return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+    }
+}
