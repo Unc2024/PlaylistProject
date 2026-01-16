@@ -80,4 +80,12 @@ public class Playlist {
         int seconds = totalSeconds % 60;
         return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
     }
+
+    public void removeAllUnliked() {
+        for (int i = songs.size() - 1; i >= 0; i--) {
+            if (!songs.get(i).isLiked()) {
+                songs.remove(i);
+            }
+        }
+    }
 }
