@@ -20,10 +20,16 @@ public class PlaylistTester {
          */
         
         System.out.println("Adding songs to the Playlist...\n");
-        
+        p.addSong(new Song("Devan is cool", "Devan Truong", 1, 15));
+        p.addSong(new Song("Devan is awesome", "Devan Truong", 2, 31));
+        p.addSong(new Song("Devan is Cool but with a capital C", "Devan Truong", 3, 36));
+        p.addSong(new Song("Devan is Awesome but with a capital A", "Devan Truong", 2, 41));
+        p.addSong(new Song("Devan is sad?", "Devan Truong", 1,32));
+        p.addSong(new Song("Devan is Sad? but with a capital S", "Devan Truong", 2,37));
 
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
+        p.printAllSongs();
 
         System.out.println("\nLiking the songs in position 2, 3, 4....\n");
         //Once your songs are 'liked', this should be reflected in the next printout
